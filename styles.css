@@ -22,14 +22,14 @@ h1 {
   max-width: 1200px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color:lightskyblue;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #task-board, #chat {
   width: 45%;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color:aquamarine;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -46,7 +46,7 @@ h2 {
   margin-bottom: 10px;
   padding: 10px;
   border: 1px solid #ccc;
-  background-color: #fff;
+  background-color:lightgoldenrodyellow;
   color: #333;
 }
 
@@ -60,7 +60,7 @@ h2 {
   border: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;
-  background-color: #fff;
+  background-color:mediumspringgreen;
   color: #333;
 }
 
@@ -68,7 +68,7 @@ h2 {
   margin-bottom: 10px;
   padding: 10px;
   border: 1px solid #ccc;
-  background-color: #f2f2f2;
+  background-color:moccasin;
   color: #333;
 }
 
@@ -79,14 +79,14 @@ h2 {
 #send-file-btn {
   margin-top: 5px;
   padding: 5px 10px;
-  background-color: #4CAF50;
+  background-color:palegreen;
   color: #fff;
   border: none;
   cursor: pointer;
 }
 
 #send-file-btn:hover {
-  background-color: #45a049;
+  background-color:peachpuff;
 }
 
 #message-input {
@@ -97,12 +97,12 @@ h2 {
 
 #send-btn {
   padding: 5px 10px;
-  background-color: #4CAF50;
+  background-color:skyblue;
   color: #fff;
   border: none;
   cursor: pointer;
 }
 
 #send-btn:hover {
-  background-color: #45a049;
+  background-color: thistle;
 }
