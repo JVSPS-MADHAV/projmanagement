@@ -1,41 +1,108 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color:cornflowerblue;
-  }
-  
-  .container {
-    display: flex;
-  }
-  
-  #task-board, #chat {
-    width: 50%;
-    padding: 20px;
-  }
-  
-  #task-list {
-    margin-top: 10px;
-  }
-  
-  #chat-messages {
-    height: 300px;
-    overflow-y: scroll;
-    border: 1px solid blue;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  #message-input {
-    width: 80%;
-    padding: 5px;
-    margin-right: 10px;
-  }
-  
-  #send-btn {
-    padding: 5px 10px;
-  }
-  
-  #send-btn:hover {
-    background-color: green;
-    cursor: pointer;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#task-board, #chat {
+  width: 45%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+#task-list {
+  margin-top: 10px;
+}
+
+.task {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+}
+
+.task strong {
+  color: #333;
+}
+
+#chat-messages {
+  height: 300px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  color: #333;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+#file-input {
+  margin-top: 10px;
+}
+
+#send-file-btn {
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#send-file-btn:hover {
+  background-color: #45a049;
+}
+
+#message-input {
+  width: 80%;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+#send-btn {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#send-btn:hover {
+  background-color: #45a049;
+}
