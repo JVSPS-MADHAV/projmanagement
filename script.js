@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const addTaskBtn = document.getElementById('add-task-btn');
   const messageInput = document.getElementById('message-input');
   const sendBtn = document.getElementById('send-btn');
+  const fileInput = document.getElementById('file-input');
+  const sendFileBtn = document.getElementById('send-file-btn');
 
   // Function to add a task to the task board
   function addTask(assignee, task) {
@@ -23,11 +25,34 @@ document.addEventListener('DOMContentLoaded', function() {
     chatMessages.appendChild(chatMessage);
   }
 
+  // Function to handle file uploads
+  function handleFileUpload(files) {
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const fileData = e.target.result;
+        // Simulate file transfer to other user
+        simulateFileTransfer(file.name, fileData);
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+
+  // Function to simulate file transfer to other user
+  function simulateFileTransfer(filename, filedata) {
+    // In a real-world scenario, you would send the file data to the server
+    // and then transfer it to the intended recipient user.
+
+    // Simulating the file transfer by displaying a link to the file in the chat box
+    const fileLink = `<a href="${filedata}" target="_blank">${filename}</a>`;
+    addChatMessage(`File sent: ${fileLink}`);
+  }
+
   // Event listener for adding a task
   addTaskBtn.addEventListener('click', function() {
     const assignee = assigneeInput.value.trim();
     const task = taskInput.value.trim();
-
     if (assignee !== '' && task !== '') {
       addTask(assignee, task);
       assigneeInput.value = '';
@@ -37,10 +62,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Event listener for sending a chat message
   sendBtn.addEventListener('click', function() {
-    const message = messageInput.value;
-    if (message.trim() !== '') {
+    const message = messageInput.value.trim();
+    if (message !== '') {
       addChatMessage(message);
       messageInput.value = '';
+    }
+  });
+
+  // Event listener for sending a file
+  sendFileBtn.addEventListener('click', function() {
+    const files = fileInput.files;
+    if (files.length > 0) {
+      handleFileUpload(files);
+      fileInput.value = ''; // Clear the file input
     }
   });
 
